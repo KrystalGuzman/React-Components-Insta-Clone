@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Posts.css";
 
 const LikeSection = props => {
   return (
@@ -6,9 +7,10 @@ const LikeSection = props => {
     <div
       className="like-section"
       key="likes-icons-container"
+      onClick={props.incrementLike}
     >
       <div className="like-section-wrapper">
-        <i className="far fa-heart" />
+        <i className="far fa-heart"  />
       </div>
       <div className="like-section-wrapper">
         <i className="far fa-comment" />
@@ -16,7 +18,7 @@ const LikeSection = props => {
     </div>
     <p className="like-number">
       
-      likes</p>
+    {props.likes} likes</p>
 </div>
   )
 };

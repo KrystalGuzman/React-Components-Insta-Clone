@@ -2,17 +2,15 @@
 import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+
+const SearchBar = props => {
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
         <i className="fab fa-instagram" />
       </div>
       <form className="search-form">
-        <input
-          type="text"
-          placeholder="Search"
-        />
+      <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </form>
       <div className="social-wrapper">
         <div className="social">
